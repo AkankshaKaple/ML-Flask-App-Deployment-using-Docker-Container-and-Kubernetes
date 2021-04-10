@@ -10,8 +10,11 @@ EXPOSE 8000
 # Set the working directory to /app
 WORKDIR /usr/app/
 
+# Define environment variable
+ENV NAME Akanksha
+
 # Install any needed packages specified in requirements.txt 
 RUN pip3 install -r requirements.txt
 
 # Run app.py when the container launches
-CMD python app.py
+CMD ["python", "app.py"]
